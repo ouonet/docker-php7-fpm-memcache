@@ -60,18 +60,4 @@ RUN cat /usr/src/php/php.ini-production | sed 's/^;\(date.timezone.*\)/\1 \"Etc\
 # Disable cgi.fix_pathinfo in php.ini
 RUN sed -i 's/;\(cgi\.fix_pathinfo=\)1/\10/' /usr/local/etc/php/php.ini
 
-# Install memcache extension
-# RUN set -x \
-#    && apt-get update && apt-get install -y --no-install-recommends unzip libssl-dev libpcre3 libpcre3-dev \
-#    && cd /tmp \
-#    && curl -sSO https://github.com/websupport-sk/pecl-memcache/archive/php7.zip \
-#    && unzip php7.zip \
-#    && cd pecl-memcache-php7 \
-#    && /usr/local/bin/phpize \
-#   && ./configure --with-php-config=/usr/local/bin/php-config \
-#    && make \
-#    && make install \
-#    && echo "extension=memcache.so" > /usr/local/etc/php/conf.d/ext-memcache.ini 
- 
-
 WORKDIR /var/www
