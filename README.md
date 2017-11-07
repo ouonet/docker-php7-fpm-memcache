@@ -1,12 +1,12 @@
-#docker-php7-fpm-memcache
+# docker-php7-fpm-memcache
   Although php offical image has provided docker-php-ext-installer to help user install php extension, we still need to build some extension by ourself, because it hasn't include all extensions,such like memcache.
-#Base 
+# Base 
   php:7-fpm
   
-#Memcache Source
+# Memcache Source
   I use [https://github.com/websupport-sk/pecl-memcache/archive/php7.zip](https://github.com/websupport-sk/pecl-memcache/archive/php7.zip) to build memcache for php7
 
-#All enabled extensions:
+# All enabled extensions:
 
 	[PHP Modules]
   	Core
@@ -49,5 +49,5 @@
 	zlib
 	
 	[Zend Modules]
-##Other important information
+# Other important information
 see [https://hub.docker.com/_/php/](https://hub.docker.com/_/php/)
